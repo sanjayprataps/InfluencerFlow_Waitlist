@@ -74,16 +74,15 @@ export function LeadForm() {
             <form onSubmit={handleSubmit} className="apple-space-y-sm">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="name" className="apple-body font-medium mb-3 block">
-                    Full Name
+                  <Label htmlFor="firstName" className="apple-body font-medium mb-3 block">
+                    First Name (optional)
                   </Label>
                   <Input
-                    id="name"
-                    name="name"
+                    id="firstName"
+                    name="firstName"
                     type="text"
-                    required
                     className="apple-input"
-                    placeholder="Enter your full name"
+                    placeholder="Enter your first name"
                   />
                 </div>
                 <div>
@@ -102,6 +101,27 @@ export function LeadForm() {
               </div>
 
               <div>
+                <Label htmlFor="referral" className="apple-body font-medium mb-3 block">
+                  How did you hear about us?
+                </Label>
+                <Select name="referral">
+                  <SelectTrigger className="apple-input">
+                    <SelectValue placeholder="Select one" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="twitter">Twitter/X</SelectItem>
+                    <SelectItem value="linkedin">LinkedIn</SelectItem>
+                    <SelectItem value="search">Google/Search Engine</SelectItem>
+                    <SelectItem value="friend">Friend/Colleague</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Optional fields below — currently commented out for later use */}
+
+              {/*
+              <div>
                 <Label htmlFor="company" className="apple-body font-medium mb-3 block">
                   Company
                 </Label>
@@ -109,7 +129,6 @@ export function LeadForm() {
                   id="company"
                   name="company"
                   type="text"
-                  required
                   className="apple-input"
                   placeholder="Your company name"
                 />
@@ -131,6 +150,7 @@ export function LeadForm() {
                   </SelectContent>
                 </Select>
               </div>
+              */}
 
               <div className="pt-6">
                 <button type="submit" disabled={isLoading} className="apple-button-primary w-full">
