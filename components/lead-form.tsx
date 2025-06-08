@@ -74,15 +74,15 @@ export function LeadForm() {
             <form onSubmit={handleSubmit} className="apple-space-y-sm">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="firstName" className="apple-body font-medium mb-3 block">
-                    First Name (optional)
+                  <Label htmlFor="Name" className="apple-body font-medium mb-3 block">
+                    Full Name (optional)
                   </Label>
                   <Input
-                    id="firstName"
-                    name="firstName"
+                    id="Name"
+                    name="Name"
                     type="text"
                     className="apple-input"
-                    placeholder="Enter your first name"
+                    placeholder="Enter your full name"
                   />
                 </div>
                 <div>
