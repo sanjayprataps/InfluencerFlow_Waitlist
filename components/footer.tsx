@@ -79,7 +79,7 @@ export function Footer() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="border-t border-gray-200 dark:border-gray-800 pt-8 text-center"
         >
-          <p className="text-[hsl(var(--apple-text-secondary))]">Opraah FX © {currentYear}. All rights reserved.</p>
+          <p className="text-[hsl(var(--apple-text-secondary))]">Team Ctrl+Alt+Defeat © {currentYear}. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

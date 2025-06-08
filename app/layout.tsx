@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "InfluencerFlow AI - Automate Influence. Accelerate Growth.",
   description:
-    "From discovery to payment, run end-to-end influencer campaigns 5× faster with Opraah FX's InfluencerFlow AI Platform.",
+    "From discovery to payment, run end-to-end influencer campaigns 5× faster with Team Ctrl+Alt+Defeat's InfluencerFlow AI Platform.",
   keywords: "influencer marketing, AI automation, creator discovery, campaign management, India",
   openGraph: {
     title: "InfluencerFlow AI - AI-Automated Influencer Marketing",
