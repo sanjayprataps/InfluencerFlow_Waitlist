@@ -74,20 +74,20 @@ export function LeadForm() {
             <form onSubmit={handleSubmit} className="apple-space-y-sm">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="Name" className="apple-body font-medium mb-3 block">
-                    Full Name (optional)
+                  <Label htmlFor="name" className="apple-body font-medium mb-3 block">
+                    Name (optional)
                   </Label>
                   <Input
-                    id="Name"
-                    name="Name"
+                    id="name"
+                    name="name"
                     type="text"
                     className="apple-input"
-                    placeholder="Enter your full name"
+                    placeholder="Enter your Name"
                   />
                 </div>
                 <div>
                   <Label htmlFor="email" className="apple-body font-medium mb-3 block">
-                    Work Email
+                    Email <span className="text-red-500">*</span> (required)
                   </Label>
                   <Input
                     id="email"
@@ -102,7 +102,7 @@ export function LeadForm() {
 
               <div>
                 <Label htmlFor="referral" className="apple-body font-medium mb-3 block">
-                  How did you hear about us?
+                  How did you hear about us? (optional)
                 </Label>
                 <Select name="referral">
                   <SelectTrigger className="apple-input">
