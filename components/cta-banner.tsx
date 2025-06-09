@@ -25,9 +25,6 @@ export function CTABanner() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-6">
             Ready to automate your next campaign?
           </h2>
-          <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto">
-            Join 100+ brands already using InfluencerFlow AI to scale their influencer marketing
-          </p>
           <motion.button
             onClick={scrollToForm}
             whileHover={{ scale: 1.05 }}

@@ -52,26 +52,6 @@ export function Hero() {
               </button>
             </div>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.4 }}
-            className="grid grid-cols-3 gap-8 pt-16 border-t border-[hsl(var(--apple-border))]"
-          >
-            <div className="text-center">
-              <div className="apple-title-2 font-semibold mb-2">500+</div>
-              <div className="apple-caption">Campaigns</div>
-            </div>
-            <div className="text-center">
-              <div className="apple-title-2 font-semibold mb-2">100+</div>
-              <div className="apple-caption">Brands</div>
-            </div>
-            <div className="text-center">
-              <div className="apple-title-2 font-semibold mb-2">10K+</div>
-              <div className="apple-caption">Creators</div>
-            </div>
-          </motion.div>
         </div>
 
         {/* Hero Video/Image */}

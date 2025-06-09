@@ -52,8 +52,6 @@ export function SocialProof() {
     return () => observer.disconnect()
   }, [])
 
-  const clients = ["Hike", "Oppo", "OYO", "Tinder", "BMW"]
-
   return (
     <section
       id="social-proof"
@@ -77,25 +75,6 @@ export function SocialProof() {
           <div className="text-center">
             <div className="text-5xl lg:text-6xl font-semibold text-white mb-2">{creators.toLocaleString()}+</div>
             <p className="text-white/70 text-lg">Creators</p>
-          </div>
-        </div>
-
-        {/* Client Logos */}
-        <div className="text-center">
-          <p className="text-white/70 mb-10 text-lg">Trusted by leading brands</p>
-          <div className="flex flex-wrap justify-center items-center gap-10">
-            {clients.map((client, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-md rounded-xl px-8 py-4 text-white font-medium text-lg"
-              >
-                {client}
-              </motion.div>
-            ))}
           </div>
         </div>
       </motion.div>
