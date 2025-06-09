@@ -9,9 +9,11 @@ A modern, responsive waitlist signup website for InfluencerFlow, built by Team C
 - Dark/Light mode support
 - Mobile-first approach
 - Form validation and submission handling
-- Waitlist signup functionality
+- Waitlist signup functionality with demo booking
 - Social proof sections
 - Platform features showcase
+- Animated form transitions and success states
+- Optional and required field handling
 
 ## 🛠️ Tech Stack
 
@@ -25,6 +27,31 @@ A modern, responsive waitlist signup website for InfluencerFlow, built by Team C
 - **Charts:** Recharts
 - **Date Handling:** date-fns
 - **Notifications:** Sonner
+
+## 📋 Form Features
+
+The waitlist form includes:
+
+### Current Fields
+- Name (optional)
+- Email (required)
+- Referral Source (optional)
+  - Twitter/X
+  - LinkedIn
+  - Google/Search Engine
+  - Friend/Colleague
+  - Other
+
+### Future Fields (Currently Commented)
+The following fields are prepared but currently commented out for future use:
+- Company Name
+- Monthly Influencer Spend
+  - ₹0 - ₹10,000
+  - ₹10,000 - ₹50,000
+  - ₹50,000 - ₹1,00,000
+  - ₹1,00,000+
+
+These fields can be easily enabled by uncommenting the relevant sections in the `lead-form.tsx` component.
 
 ## 🏗️ Project Structure
 
