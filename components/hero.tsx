@@ -42,7 +42,7 @@ export function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button onClick={scrollToForm} className="apple-button-primary group">
-                <span>Book a Demo</span>
+                <span>Join Waitlist</span>
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
               </button>
 

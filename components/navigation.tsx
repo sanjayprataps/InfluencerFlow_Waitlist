@@ -87,7 +87,7 @@ export function Navigation() {
           </div>
 
           <button onClick={() => scrollToSection("book")} className="apple-button-primary text-sm px-6 py-2">
-            Get Started
+            Join Waitlist
           </button>
         </div>
       </div>

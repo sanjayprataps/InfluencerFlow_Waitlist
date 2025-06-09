@@ -34,7 +34,7 @@ export function CTABanner() {
             whileTap={{ scale: 0.95 }}
             className="bg-white text-[hsl(var(--apple-blue))] font-medium px-8 py-4 text-lg rounded-full shadow-xl transition-all duration-300 hover:shadow-2xl"
           >
-            Book a Demo
+            Join Waitlist
           </motion.button>
         </motion.div>
       </div>

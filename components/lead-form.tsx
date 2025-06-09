@@ -154,7 +154,7 @@ export function LeadForm() {
 
               <div className="pt-6">
                 <button type="submit" disabled={isLoading} className="apple-button-primary w-full">
-                  {isLoading ? "Booking Demo..." : "Book Demo"}
+                  {isLoading ? "Joining Waitlist..." : "Join Waitlist"}
                 </button>
               </div>
             </form>
