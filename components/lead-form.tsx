@@ -11,6 +11,7 @@ import { CheckCircle } from "lucide-react"
 export function LeadForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [selectedReferral, setSelectedReferral] = useState("")
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -36,13 +37,10 @@ export function LeadForm() {
             <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-8">
               <CheckCircle className="w-8 h-8 text-white" />
             </div>
-            <h2 className="apple-title-1">Demo Booked!</h2>
+            <h2 className="apple-title-1">You've joined the waitlist!</h2>
             <p className="apple-body">
-              Thank you for your interest. We'll be in touch within 24 hours to schedule your personalized demo.
+              Stay tuned for updates
             </p>
-            <button onClick={() => setIsSubmitted(false)} className="apple-button-secondary">
-              Book Another Demo
-            </button>
           </motion.div>
         </div>
       </section>
@@ -104,7 +102,7 @@ export function LeadForm() {
                 <Label htmlFor="referral" className="apple-body font-medium mb-3 block">
                   How did you hear about us? (optional)
                 </Label>
-                <Select name="referral">
+                <Select name="referral" onValueChange={setSelectedReferral}>
                   <SelectTrigger className="apple-input">
                     <SelectValue placeholder="Select one" />
                   </SelectTrigger>
@@ -116,6 +114,22 @@ export function LeadForm() {
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
+                {selectedReferral === "other" && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    transition={{ duration: 0.3 }}
+                    className="mt-4"
+                  >
+                    <Input
+                      id="other-referral"
+                      name="other-referral"
+                      type="text"
+                      className="apple-input"
+                      placeholder="Please enter details"
+                    />
+                  </motion.div>
+                )}
               </div>
 
               {/* Optional fields below — currently commented out for later use */}

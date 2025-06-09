@@ -39,7 +39,7 @@ export function Footer() {
               <span className="text-[hsl(var(--apple-text))] text-xl font-semibold">InfluencerFlow AI</span>
             </div>
             <p className="text-[hsl(var(--apple-text-secondary))] mb-6">Automate Influence. Accelerate Growth.</p>
-            <p className="text-[hsl(var(--apple-text-secondary))]">Contact: info@opraahfx.com</p>
+            {/* <p className="text-[hsl(var(--apple-text-secondary))]">Contact: info@opraahfx.com</p> */}
           </motion.div>
 
           <div className="grid grid-cols-2 gap-12">

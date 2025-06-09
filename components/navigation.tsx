@@ -41,7 +41,7 @@ export function Navigation() {
     { id: "features", label: "Features" },
     { id: "how-it-works", label: "How It Works" },
     { id: "video", label: "Demo" },
-    { id: "book", label: "Contact" },
+    // { id: "contact-no-redirect", label: "Contact" },
   ]
 
   return (
