@@ -17,11 +17,45 @@ export function LeadForm() {
     e.preventDefault()
     setIsLoading(true)
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    const formData = new FormData(e.currentTarget)
+    const name = formData.get("name") as string
+    const email = formData.get("email") as string
+    const referral = formData.get("referral") as string
+    const otherReferral = formData.get("other-referral") as string
 
-    setIsLoading(false)
-    setIsSubmitted(true)
+    const data = {
+      "Name": name,
+      "Email": email,
+      "How did you hear about us?": referral === "other" ? otherReferral : referral,
+    }
+
+    try {
+      const sheetdbApiUrl = process.env.NEXT_PUBLIC_SHEETDB_API_URL
+      if (!sheetdbApiUrl) {
+        throw new Error("SheetDB API URL is not defined in environment variables.")
+      }
+
+      const response = await fetch(sheetdbApiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (response.ok) {
+        setIsSubmitted(true)
+      } else {
+        // Handle API error, e.g., show an error message
+        console.error("SheetDB API error:", response.status, response.statusText)
+        alert("There was an error joining the waitlist. Please try again.")
+      }
+    } catch (error) {
+      console.error("Failed to submit to SheetDB:", error)
+      alert("Network error. Please check your connection and try again.")
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   if (isSubmitted) {
